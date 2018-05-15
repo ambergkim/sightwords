@@ -15,6 +15,8 @@ const store = createStore(
 
 import Dashboard from './dashboard.jsx';
 
+console.log('Public URL', process.env.PUBLIC_URL);
+
 class App extends React.Component {
   render() {
     return (
