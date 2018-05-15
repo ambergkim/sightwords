@@ -4,7 +4,7 @@ import {
 import uuidv1 from 'uuid/v1';
 
 const initialState = {
-  words: ['flower', 'house', 'car', 'happy', 'apple'],
+  words: ['flower', 'house', 'car', 'happy', 'apple', 'hippopotamus', 'turtle', 'frog', 'orange', 'correct', 'cedar', 'focus', 'goes', 'cute', 'hide', 'come', 'same'],
 }
 
 export default function wordCardReducer(state, action) {
@@ -18,8 +18,6 @@ export default function wordCardReducer(state, action) {
   switch(action.type) {
     case WORD_CREATE:
       let newWord = action.value;
-      console.log('input value', action.value.word);
-      console.log('state', state);
       currentWords = state.words.slice();
       currentWords.push(action.value.word);
       return Object.assign({}, {words: currentWords});

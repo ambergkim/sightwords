@@ -11,6 +11,8 @@ class Dashboard extends React.Component {
     return <React.Fragment>
         <WordCard />
         <WordForm />
+        <p>Click on the word or card to hear the word.</p>
+        <p>Add a word or sentence using the form above.</p>
       </React.Fragment>
   }
 }
