@@ -21,7 +21,7 @@ export default function wordCardReducer(state, action) {
       console.log('input value', action.value.word);
       console.log('state', state);
       currentWords = state.words.slice();
-      currentWords.push(action.value);
+      currentWords.push(action.value.word);
       return Object.assign({}, {words: currentWords});
     default: return state;
   }

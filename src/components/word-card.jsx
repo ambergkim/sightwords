@@ -1,14 +1,14 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
-import say from 'say';
+import './word-card.scss';
 
 class WordCard extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      currentWord: ''
+      currentWord: 'Hello'
     }
 
     this.randomWord = this.randomWord.bind(this);
@@ -21,24 +21,22 @@ class WordCard extends React.Component {
     let randomIndex = Math.floor(Math.random() * currentWords.length);
     console.log('random index', randomIndex);
     let newWord = currentWords[randomIndex];
-    this.state = {
-      currentWord: newWord
-    }
-    return <p>{newWord}</p>
+    this.setState({currentWord: newWord});
   }
 
   readWord(event) {
     event.preventDefault();
     console.log('word to say', this.state.currentWord);
-    say.speak('Hello!', 'Alex');
+    responsiveVoice.speak(this.state.currentWord);
   }
 
   render() {
-    return <div>
-      <h1>Random Word:</h1>
-      <h2>{this.randomWord()}</h2>
-      <button onClick={this.readWord}>read</button>
-    </div>
+    return <React.Fragment>
+        <div onClick={this.readWord} className='card'>
+          <p>{this.state.currentWord}</p>
+        </div>
+        <button onClick={() => {this.randomWord()}}className='new-button'>new</button>
+      </React.Fragment>
   }
 }
 

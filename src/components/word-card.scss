@@ -1,0 +1,20 @@
+.card {
+  background-color: #efefef;
+  text-align: center;
+  font-size: 60px;
+  padding: 5%;
+  width: 90%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: red;
+  border: solid 1px black;
+}
+
+.new-button {
+  position: absolute;
+  top: 3%;
+  left: 2%;
+}
+
