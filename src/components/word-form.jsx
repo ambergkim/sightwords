@@ -37,7 +37,7 @@ class WordForm extends React.Component {
 
 const mapStateToProps = state => {
   return {
-    words: state.words.words
+    words: state.words
   }
 };
 
