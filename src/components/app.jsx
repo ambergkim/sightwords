@@ -21,7 +21,7 @@ class App extends React.Component {
   render() {
     return (
       <Provider store={store}>
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <BrowserRouter basename="/sightwords">
         <Route exact path='/' component={Dashboard} />
       </BrowserRouter>
       </Provider>
