@@ -5,13 +5,13 @@ const config = {
   devtool: 'source-map',
   entry: `${__dirname}/src/main.jsx`,
   output: {
-    path: `${__dirname}/public`,
+    path: `${__dirname}/docs`,
     filename: 'bundle.js'
   },
   plugins: [
     new HtmlPlugin({ template: __dirname + '/src/index.html' })
   ],
-  module: {
+  module: { 
     rules: [
       {
         test: /\.jsx?$/, loader: ['babel-loader'], exclude: /node_modules/
