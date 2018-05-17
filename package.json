@@ -1,18 +1,26 @@
 {
-  "name": "react-redux-exercise",
+  "name": "amber-kim-sightwords",
   "version": "1.0.0",
-  "description": "React Redux Exercise",
-  "main": "main.jsx",
+  "description": "Amber Kim Sight Words",
+  "main": "dist/main.js",
   "scripts": {
+    "start": "webpack-dev-server --mode development",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
+    "build": "webpack --mode production",
+    "deploy": "gh-pages -d public",
+    "publish-demo": "npm run build && npm run deploy",
     "watch": "webpack --watch",
     "hot": "webpack-dev-server --inline --hot --history-api-fallback",
-    "deploy": "git subtree push --prefix dist origin gh-pages"
+    "transpile": "babel src -d dist --copy-files",
+    "prepublishOnly": "npm run transpile"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "peerDependencies": {
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2"
+  },
   "dependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
@@ -22,8 +30,6 @@
     "css-loader": "^0.28.11",
     "html-webpack-plugin": "^3.2.0",
     "node-sass": "^4.9.0",
-    "react": "^16.3.2",
-    "react-dom": "^16.3.2",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.2.2",
     "redux": "^4.0.0",
@@ -41,5 +47,8 @@
     "url": "https://github.com/ambergkim/sightwords/issues"
   },
   "homepage": "https://ambergkim.github.io/sightwords/",
-  "devDependencies": {}
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "gh-pages": "^1.1.0"
+  }
 }

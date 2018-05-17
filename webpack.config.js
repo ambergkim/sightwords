@@ -4,6 +4,10 @@ const config = {
   mode: 'development',
   devtool: 'source-map',
   entry: `${__dirname}/src/main.jsx`,
+  output: {
+    path: `${__dirname}/public`,
+    filename: 'bundle.js'
+  },
   plugins: [
     new HtmlPlugin({ template: __dirname + '/src/index.html' })
   ],
