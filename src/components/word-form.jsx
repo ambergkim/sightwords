@@ -5,6 +5,8 @@ import {
   wordCreate
 } from '../actions/word-card-actions.js';
 
+import './word-form.scss';
+
 class WordForm extends React.Component {
   constructor(props) {
     super(props);
