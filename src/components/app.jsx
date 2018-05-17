@@ -21,9 +21,7 @@ class App extends React.Component {
   render() {
     return (
       <Provider store={store}>
-      <BrowserRouter basename="/sightwords">
-        <Route exact path='/' component={Dashboard} />
-      </BrowserRouter>
+        <Dashboard />
       </Provider>
     )
   }

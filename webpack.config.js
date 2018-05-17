@@ -6,7 +6,7 @@ const config = {
   entry: `${__dirname}/src/main.jsx`,
   output: {
     path: `${__dirname}/docs`,
-    filename: '/sightwords/docs/bundle.js'
+    filename: 'bundle.js'
   },
   plugins: [
     new HtmlPlugin({ template: __dirname + '/src/index.html' })
