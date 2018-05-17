@@ -21,7 +21,7 @@ class WordCard extends React.Component {
 
   readWord(event) {
     event.preventDefault();
-    responsiveVoice.speak(this.props.words.displayWord);
+    responsiveVoice.speak(this.props.words.displayWord, 'US English Female');
   }
 
   render() {

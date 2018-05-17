@@ -10,3 +10,4 @@ A simple React/Redux app for helping kids how to learn to read words.
   * Babel
   * Sass
   * Webpack
+  * Responsive Voice API

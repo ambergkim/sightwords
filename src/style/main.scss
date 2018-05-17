@@ -7,14 +7,20 @@ $roboto-slab: 'Roboto Slab', sans-serif;
   font-family: $roboto-slab;
 }
 
+body {
+  background-color: #efefef;
+}
+
 input {
   font-size: 14px;
   padding: 1em 1.5em;
+  border: solid 1px black;
 }
 
 button {
   font-size: 20px;
   padding: 0.5em 1em;
+  background-color: cornflowerblue;
 }
 
 form {
