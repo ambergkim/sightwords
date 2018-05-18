@@ -5,6 +5,8 @@ import {
   wordRandom
 } from '../actions/word-card-actions.js'
 
+import WordForm from './word-form.jsx';
+
 import './word-card.scss';
 
 class WordCard extends React.Component {
@@ -32,6 +34,7 @@ class WordCard extends React.Component {
         <button onClick={() => {
           this.randomWord();
         }}className='new-button'>new</button>
+        <WordForm />
       </React.Fragment>
   }
 }
