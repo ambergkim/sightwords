@@ -10,7 +10,7 @@ class Dashboard extends React.Component {
     return <React.Fragment>
         <WordCard />
         <p>Click on the word or card to hear the word.</p>
-        <p>Add a word or sentence using the form above. It will show randomly when you click on 'new'.</p>
+        <p>Add a new word by clicking on the gear icon and using the form.</p>
       </React.Fragment>
   }
 }
