@@ -3,7 +3,6 @@ import {connect} from 'react-redux';
 
 import WordCard from './word-card.jsx';
 
-import '../style/normalize.css';
 import '../style/main.scss';
 
 class Dashboard extends React.Component {

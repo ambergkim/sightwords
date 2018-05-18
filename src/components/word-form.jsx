@@ -12,9 +12,11 @@ class WordForm extends React.Component {
     super(props);
     this.state = {
       word: '',
+      isEditing: false,
     }
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.toggleEdit = this.toggleEdit.bind(this);
   }
 
   handleInputChange(event) {
@@ -29,11 +31,23 @@ class WordForm extends React.Component {
     this.props.wordCreate(this.state);
   }
 
+  toggleEdit(event) {
+    event.preventDefault();
+    this.setState({isEditing: !this.state.isEditing});
+  }
+
   render() {
-    return <form onSubmit={this.handleSubmit}>
-    <input onChange={this.handleInputChange} type="text" placeholder="add a word"/>
-    <button type="submit">Submit</button>
-  </form>
+    return <React.Fragment>
+      <div className="gear" onClick={this.toggleEdit}>&#9881;</div>
+      {
+        this.state.isEditing ?
+        <form onSubmit={this.handleSubmit}>
+        <input onChange={this.handleInputChange} type="text" placeholder="add a word"/>
+        <button type="submit">submit</button>
+      </form> :
+      <div></div> 
+      }
+    </ React.Fragment>
   }
 }
 

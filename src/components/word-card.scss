@@ -2,8 +2,8 @@
   background-color: white;
   text-align: center;
   padding: 5%;
-  width: 100vw;
-  height: 90vh;
+  // width: 100vw;
+  // height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,12 +16,13 @@
   }
 }
 
-.new-button {
-  background-color: cornflowerblue;
-  border: solid 1px black;
-  position: absolute;
-  top: 3%;
-  left: 2%;
-  color: white;
-}
 
+.menu {
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  position: absolute;
+  top: 5%;
+  left: 3%;
+}
