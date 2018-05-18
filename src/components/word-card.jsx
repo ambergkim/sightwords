@@ -23,7 +23,7 @@ class WordCard extends React.Component {
 
   readWord(event) {
     event.preventDefault();
-    responsiveVoice.speak(this.props.words.displayWord, 'US English Female');
+    responsiveVoice.speak(this.props.words.displayWord);
   }
 
   render() {
@@ -31,10 +31,13 @@ class WordCard extends React.Component {
         <div onClick={this.readWord} className='card'>
           <p>{this.props.words.displayWord}</p>
         </div>
-        <button onClick={() => {
-          this.randomWord();
-        }}className='new-button'>new</button>
-        <WordForm />
+        <div className="menu">
+          <button onClick={() => {
+            this.randomWord();
+          }}>new</button>
+          <WordForm />
+        </div>
+        
       </React.Fragment>
   }
 }
