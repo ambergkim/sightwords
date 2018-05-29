@@ -9,6 +9,8 @@ import WordForm from './word-form.jsx';
 
 import './word-card.scss';
 
+responsiveVoice.setDefaultVoice("US English Female");
+
 class WordCard extends React.Component {
   constructor(props) {
     super(props);
